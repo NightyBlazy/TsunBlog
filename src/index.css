@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&family=Unbounded&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+:root {
+  /* Build defaults */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Font settings */ 
+  --FONT-HEADER: 'Unbounded', cursive;
+  --FONT-TITLE: 'Roboto Condensed', sans-serif;;
+  --FF: 'Open Sans', sans-serif;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+  /* Colors */ 
+  --BG-COLOR: aliceblue;
+  --BODY-COLOR: palegoldenrod;
+  --BORDER-COLOR: #000;
+  --SHADOW-COLOR: rgb(77, 75, 75);
+  --HEADER-BGCOLOR: #333;
+  --LINK-COLOR: #000;
+  --LINK-HOVER: rgb(241, 65, 65);
+  --LINK-ACTIVE:rgb(238, 10, 10);
+  --NAVBAR-COLOR: #333;
+
+
+
+
+
+
+  /* Borders */
+  --BORDER: 1px solid var(--BORDER-COLOR);
+  --BORDER-RADIUS: 15px;
+  
+
+  /* Margin-Padding */ 
+  --PADDING-TB : 0.25em;
+  --PADDING-SIDE: 2.5%;
+
+  --MARGIN: clamp(1em, 2.5vh, 1.5em) 0 ;
+
+
+}
+
+/* || Utility */ 
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* General Declarations */
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BG-COLOR);
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color:  var(--BODY-COLOR);
+
+}
+
+h1, h2, h3 {
+  font-family: var(--FONT-HEADER);
+}
+
+
+
+/* Header */ 
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--NAVBAR-COLOR);
+  color: white;
+}
+
+.brand-title {
+  font-size: 2rem;
+  margin: .5rem;
+  font-family: var(--FONT-TITLE);
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-family: var(--FONT-TITLE);
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+/* Home Component */ 
+
+

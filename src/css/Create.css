@@ -1,0 +1,79 @@
+.main__form {
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--CARD-COLOR);
+    border-radius: var(--BORDER-RADIUS);
+    box-shadow: var(--SHADOW); 
+  }
+  
+  .form__group{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form__label, .form_input, .form__group , .form_textarea {
+    margin: 0.5em;
+  }
+  
+  .form__label {
+    font-size: 1em ;
+    font-family: var(--FONT-HEADER);
+    font-weight: bolder;
+  }
+  
+  .form__input, .form__textarea {
+    font-family: var(--FONT-HEADER);
+    background-color: lightgrey;
+    border-color: var(--INPUT-BORDERCOLOR);
+    border: var(--BORDER);
+    margin: 0 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .form__input {
+    padding: 0.5em 0.5em;
+  }
+  
+  .form__textarea {
+    height: 50vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  .form__input:hover, .form__textarea:hover,
+  .form__input:focus, .form__textarea:focus{
+    border-color: rgb(162, 163, 165);
+  }
+  
+  .form__input:active, .form__textarea:active,
+  .form__input:current , .form__textarea:current {
+    border-color: gray
+  }
+  
+  .form__button {
+    margin: 1em auto;
+    padding: 0.25em 0.5em;
+    border: none;
+    background-color:lightslategray;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form__button:hover {
+    background-color: rgb(162, 163, 165);
+  }
+  
+  .form__button:disabled {
+    cursor: not-allowed;
+  }
+  

@@ -1,11 +1,12 @@
 import React from 'react'
 import Blogs from './Blogs'
+import '../css/Home.css'
 
 const Home = () => {
   return (
-    <div className='container'>
+    <main className='main__home'>
       <Blogs />
-    </div>
+    </main>
   )
 }
 

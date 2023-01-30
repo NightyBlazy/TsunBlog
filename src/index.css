@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&family=Unbounded&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto+Condensed&display=swap');
 *,
 *::after,
 *::before {
@@ -27,23 +26,24 @@ input, button, textarea {
   -webkit-text-size-adjust: 100%;
 
   /* Font settings */ 
-  --FONT-HEADER: 'Unbounded', cursive;
+  --FONT-HEADER: 'Poppins', sans-serif;
   --FONT-TITLE: 'Roboto Condensed', sans-serif;;
   --FF: 'Open Sans', sans-serif;
   --FS: clamp(1rem, 2.2vh, 1.5rem);
 
   /* Colors */ 
-  --BG-COLOR: aliceblue;
+  --CARD-COLOR: aliceblue;
   --BODY-COLOR: palegoldenrod;
   --BORDER-COLOR: #000;
-  --SHADOW-COLOR: rgb(77, 75, 75);
+  --SHADOW-COLOR: rgba(0, 0, 0, 0.253);
   --HEADER-BGCOLOR: #333;
-  --LINK-COLOR: #000;
-  --LINK-HOVER: rgb(241, 65, 65);
-  --LINK-ACTIVE:rgb(238, 10, 10);
   --NAVBAR-COLOR: #333;
+  --INPUT-BORDERCOLOR: lightslategray;
 
+  --FONT-MUTE: rgb(56, 56, 56) ;
 
+  --SHADOW: 1px 1px 5px var(--SHADOW-COLOR);
+  --SHADOW-HOVER: 2px 2px 10px rgba(0, 0, 0, 0.575);
 
 
 
@@ -85,116 +85,29 @@ html {
   scroll-behavior: smooth;
   font-size: var(--FS);
   font-family: var(--FF);
-  background-color: var(--BG-COLOR);
 }
 
 
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   background-color:  var(--BODY-COLOR);
-
 }
 
 h1, h2, h3 {
   font-family: var(--FONT-HEADER);
 }
 
-
-
-/* Header */ 
-.navbar {
+main {
+  flex-grow: 1;
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--NAVBAR-COLOR);
-  color: white;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
-.brand-title {
-  font-size: 2rem;
-  margin: .5rem;
-  font-family: var(--FONT-TITLE);
+a:any-link {
+  color: #000;
 }
-
-.navbar-links {
-  height: 100%;
-}
-
-.navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  font-family: var(--FONT-TITLE);
-}
-
-.navbar-links li:hover {
-  background-color: #555;
-}
-
-.toggle-button {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-@media (max-width: 800px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .toggle-button {
-      display: flex;
-  }
-
-  .navbar-links {
-      display: none;
-      width: 100%;
-  }
-
-  .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
-  }
-
-  .navbar-links ul li {
-      text-align: center;
-  }
-
-  .navbar-links ul li a {
-      padding: .5rem 1rem;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
-}
-
-/* Home Component */ 
 
 

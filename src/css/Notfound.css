@@ -1,0 +1,13 @@
+.main__notfound {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 1em auto;
+    padding: 1.75em;
+    justify-content: center;
+}
+
+.notfound__h1 , .notfound__h2{
+    text-align: center;
+    color: red;
+}

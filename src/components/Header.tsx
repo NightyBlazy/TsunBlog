@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
+import '../css/Header.css'
 
 export const Header = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
 
 
-    useEffect(() => {
-        console.log("Is Hamburger menu active? =>"+isNavExpanded);
-    }, [isNavExpanded])
 
   return (
     <header>
     <nav className='navbar'>
-    <div className='brand-title'>TsunBlog</div>
+    <div className='brand-title'><Link to="/">TsunBlog</Link></div>
     <a className="toggle-button" onClick={() => {
         setIsNavExpanded(!isNavExpanded);
     }}>

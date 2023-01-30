@@ -1,5 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import About from "./components/About"
+import BlogPage from "./components/BlogPage"
 import Create from "./components/Create"
 import Header from './components/Header'
 import Home from './components/Home'
@@ -13,8 +14,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/create' element={<Create />}/>
+        <Route path="/blog/:id" element={<BlogPage/>} />
         <Route path='/about' element={<About />}/>
         <Route path='*' element={<NotFound />}/>
+
       </Routes>
     </div>
     </BrowserRouter>
